@@ -1,6 +1,6 @@
 {
   "name": "routing-controllers",
-  "private": true,
+  "private": false,
   "version": "0.7.1",
   "description": "Create structured, declarative and beautifully organized class-based controllers with heavy decorators usage for Express / Koa using TypeScript.",
   "license": "MIT",
