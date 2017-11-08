@@ -169,6 +169,9 @@ export abstract class BaseDriver {
                     .filter(key => name === key)
                     .forEach(key => processedError = this.merge(processedError, this.errorOverridingMap[key]));
 
+            if (typeof (error as any).toJSON === "function")
+                processedError.toJSON = (error as any).toJSON;
+
             return Object.keys(processedError).length > 0 ? processedError : undefined;
         }
 
